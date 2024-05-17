@@ -16,8 +16,8 @@
     "docs:preview": "dumi preview",
     "doctor": "father doctor",
     "g": "npm run generate",
-    "generate": "cross-env NODE_ENV=production gulp --require ts-node/register/transpile-only",
     "g:debug": "cross-env NODE_ENV=production node --inspect-brk node_modules/gulp/bin/gulp.js --require ts-node/register/transpile-only",
+    "generate": "cross-env NODE_ENV=production gulp --require ts-node/register/transpile-only",
     "lint": "npm run lint:es && npm run lint:css",
     "lint:css": "stylelint \"{src,test}/**/*.{css,less}\"",
     "lint:es": "eslint \"{src,test}/**/*.{js,jsx,ts,tsx}\"",
@@ -47,7 +47,10 @@
       "prettier --parser=typescript --write"
     ]
   },
-  "dependencies": {},
+  "dependencies": {
+    "@babel/runtime": "^7.11.2",
+    "lodash.upperfirst": "^4.3.1"
+  },
   "devDependencies": {
     "@commitlint/cli": "^17.1.2",
     "@commitlint/config-conventional": "^17.1.0",
@@ -75,7 +78,6 @@
     "lodash": "^4.17.21",
     "lodash.camelcase": "^4.3.0",
     "lodash.template": "^4.5.0",
-    "lodash.upperfirst": "^4.3.1",
     "pkg-dir": "^4.0.0",
     "prettier": "^2.7.1",
     "prettier-plugin-organize-imports": "^3.0.0",

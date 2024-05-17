@@ -14,7 +14,7 @@ import {
 
 import { readFileSync } from 'fs';
 import { resolve } from 'path';
-import { getIdentifier } from './src/utils';
+import { getIdentifier } from './scripts/utils';
 // import { IconDefinition } from './scripts/templates/types';
 // import { ExtractRegExp } from './scripts/tasks/creators/generateInline';
 
@@ -25,32 +25,32 @@ const iconTemplate = readFileSync(
 
 export default series(
   // 1. clean
-  // clean(['src/defines']),
+  clean(['src/defines']),
 
   parallel(
     // 2.1 copy helpers.ts, types.ts
-    // copy({
-    //   from: ['scripts/templates/*.ts'],
-    //   toDir: 'src/defines',
-    // }),
+    copy({
+      from: ['scripts/templates/*.ts'],
+      toDir: 'src/defines',
+    }),
     // 2.2 generate abstract node with the theme "filled"
-    // generateIcons({
-    //   theme: 'filled',
-    //   from: ['src/svgs/*.svg'],
-    //   toDir: 'src/defines/asn',
-    //   svgoConfig: generalConfig,
-    //   extraNodeTransformFactories: [
-    //     assignAttrsAtTag('svg', { focusable: 'false' }),
-    //     adjustViewBox,
-    //   ],
-    //   stringify: JSON.stringify,
-    //   template: iconTemplate,
-    //   mapToInterpolate: ({ name, content }) => ({
-    //     identifier: getIdentifier({ name, themeSuffix: 'Filled' }),
-    //     content,
-    //   }),
-    //   filename: ({ name }) => getIdentifier({ name, themeSuffix: 'Filled' }),
-    // }),
+    generateIcons({
+      theme: 'filled',
+      from: ['src/svgs/*.svg'],
+      toDir: 'src/defines/asn',
+      svgoConfig: generalConfig,
+      extraNodeTransformFactories: [
+        assignAttrsAtTag('svg', { focusable: 'false' }),
+        adjustViewBox,
+      ],
+      stringify: JSON.stringify,
+      template: iconTemplate,
+      mapToInterpolate: ({ name, content }) => ({
+        identifier: getIdentifier({ name, themeSuffix: 'Filled' }),
+        content,
+      }),
+      filename: ({ name }) => getIdentifier({ name, themeSuffix: 'Filled' }),
+    }),
     parallel(
       // 3.1 generate entry file: src/index.ts
       generateEntry({
