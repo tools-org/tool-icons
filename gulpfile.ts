@@ -46,10 +46,10 @@ export default series(
       stringify: JSON.stringify,
       template: iconTemplate,
       mapToInterpolate: ({ name, content }) => ({
-        identifier: getIdentifier({ name, themeSuffix: 'Filled' }),
+        identifier: getIdentifier({ name, themeSuffix: 'Outlined' }),
         content,
       }),
-      filename: ({ name }) => getIdentifier({ name, themeSuffix: 'Filled' }),
+      filename: ({ name }) => getIdentifier({ name, themeSuffix: 'Outlined' }),
     }),
     parallel(
       // 3.1 generate entry file: src/index.ts
