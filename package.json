@@ -47,9 +47,7 @@
       "prettier --parser=typescript --write"
     ]
   },
-  "dependencies": {
-    "lodash.upperfirst": "^4.3.1"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@babel/runtime": "^7.11.2",
     "@commitlint/cli": "^17.1.2",
@@ -78,6 +76,7 @@
     "lodash": "^4.17.21",
     "lodash.camelcase": "^4.3.0",
     "lodash.template": "^4.5.0",
+    "lodash.upperfirst": "^4.3.1",
     "pkg-dir": "^4.0.0",
     "prettier": "^2.7.1",
     "prettier-plugin-organize-imports": "^3.0.0",
