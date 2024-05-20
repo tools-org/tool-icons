@@ -3,52 +3,17 @@ import type { AbstractNode, IconDefinition } from '../defines/types';
 import { generate } from '../utils';
 
 export interface IconProps {
-  icon: IconDefinition;
   className?: string;
   onClick?: React.MouseEventHandler<SVGSVGElement>;
   style?: React.CSSProperties;
   svgStyle?: React.CSSProperties;
-  primaryColor?: string; // only for two-tone
-  secondaryColor?: string; // only for two-tone
-  focusable?: string;
 }
 
-export interface TwoToneColorPaletteSetter {
-  primaryColor: string;
-  secondaryColor?: string;
+export interface IconBaseProps extends IconProps {
+  icon: IconDefinition;
 }
 
-export interface TwoToneColorPalette extends TwoToneColorPaletteSetter {
-  calculated?: boolean; // marker for calculation
-}
-
-const twoToneColorPalette: TwoToneColorPalette = {
-  primaryColor: '#333',
-  secondaryColor: '#E6E6E6',
-  calculated: false,
-};
-
-function setTwoToneColors({
-  primaryColor,
-  secondaryColor,
-}: TwoToneColorPaletteSetter) {
-  twoToneColorPalette.primaryColor = primaryColor;
-  twoToneColorPalette.secondaryColor = secondaryColor;
-  twoToneColorPalette.calculated = !!secondaryColor;
-}
-
-function getTwoToneColors(): TwoToneColorPalette {
-  return {
-    ...twoToneColorPalette,
-  };
-}
-
-interface IconBaseComponent<P> extends React.FC<P> {
-  getTwoToneColors: typeof getTwoToneColors;
-  setTwoToneColors: typeof setTwoToneColors;
-}
-
-const IconBase: IconBaseComponent<IconProps> = (props) => {
+const IconBase: React.FC<IconBaseProps> = (props) => {
   const {
     icon,
     className,
@@ -85,8 +50,6 @@ const IconBase: IconBaseComponent<IconProps> = (props) => {
   );
 };
 
-IconBase.displayName = 'IconReact';
-IconBase.getTwoToneColors = getTwoToneColors;
-IconBase.setTwoToneColors = setTwoToneColors;
+IconBase.displayName = 'IconBase';
 
 export default IconBase;
