@@ -2,6 +2,6 @@
 
 import { IconDefinition } from '../types';
 
-const SuggestionOutlined: IconDefinition = {"icon":{"tag":"svg","attrs":{"viewBox":"64 64 896 896","focusable":"false"},"children":[{"tag":"path","attrs":{"d":"M93.1 930.9h837.8V569.54L512 778.98 93.1 569.53v361.38zm837.8-465.45l41.64-20.8 51.46 31.79v46.54l-93.1 46.55V465.45zm-46.54-126.23L1024 402.7V1024H0V402.69l139.64-63.47V0h744.72v339.22zm0 102.26v47.25l49.5-24.76-49.5-22.49zm-93.09 93.8V93.08H232.73v442.18L512 674.91l279.27-139.64zm-651.63-46.55v-47.25l-49.5 22.49 49.5 24.76zm186.18-302.55h372.36v93.1H325.82v-93.1zm0 186.18h279.27v93.1H325.82v-93.1z"}}]},"name":"suggestion","theme":"filled"};
+const SuggestionOutlined: IconDefinition = {"icon":{"tag":"svg","attrs":{"viewBox":"64 64 896 896","focusable":"false"},"children":[{"tag":"path","attrs":{"d":"M143.82 880.18h736.36V562.56L512 746.66l-368.18-184.1v317.62zM880.18 471.1l36.6-18.29L962 480.75v40.9l-81.82 40.91V471.1zm-40.9-110.94L962 415.92V962H62V415.92l122.73-55.77V62h654.54v298.15zm0 89.87v41.53l43.5-21.77-43.5-19.76zm-81.83 82.43V143.82h-490.9v388.63L512 655.18l245.45-122.73zm-572.72-40.9v-41.53l-43.51 19.76 43.5 21.77zm163.63-265.91h327.28v81.81H348.36v-81.81zm0 163.63h245.46v81.82H348.36v-81.82z"}}]},"name":"suggestion","theme":"filled"};
 
 export default SuggestionOutlined;

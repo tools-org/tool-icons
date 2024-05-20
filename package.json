@@ -1,6 +1,6 @@
 {
   "name": "@fett/icons",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "tools icons",
   "license": "MIT",
   "module": "dist/index.js",

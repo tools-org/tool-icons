@@ -2,6 +2,6 @@
 
 import { IconDefinition } from '../types';
 
-const CopyFileOutlined: IconDefinition = {"icon":{"tag":"svg","attrs":{"viewBox":"64 64 896 896","focusable":"false"},"children":[{"tag":"path","attrs":{"d":"M84.18 826.01L282.17 1024h506.45V149.28H84.18zm112.06 0h85.93v84.74zm-32.87-597.53h546.06v715.93H361.36v-198H163.37zM195.45 0v79.2H860.3v834.72h79.2V0H195.44z"}}]},"name":"copyFile","theme":"filled"};
+const CopyFileOutlined: IconDefinition = {"icon":{"tag":"svg","attrs":{"viewBox":"64 64 896 896","focusable":"false"},"children":[{"tag":"path","attrs":{"d":"M135.98 787.99L310 962h445.13V193.2H135.98zm98.5 0H310v74.47zM205.59 262.8h479.93v629.24H379.6V718.03H205.6zM233.78 62v69.6h584.34v733.65h69.6V62H233.78z"}}]},"name":"copyFile","theme":"filled"};
 
 export default CopyFileOutlined;
