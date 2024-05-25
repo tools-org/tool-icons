@@ -37,4 +37,3 @@ export { default as TransformOutlined } from './icons/TransformOutlined';
 export { default as UpdateOutlined } from './icons/UpdateOutlined';
 export { default as UrlOutlined } from './icons/UrlOutlined';
 export { default as WebsiteOutlined } from './icons/WebsiteOutlined';
-export { default as CircleEnvelopeOutlined } from "./icons/CircleEnvelopeOutlined"
