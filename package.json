@@ -1,6 +1,6 @@
 {
   "name": "@fett/icons",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "tools icons",
   "license": "MIT",
   "module": "dist/index.js",
@@ -22,6 +22,7 @@
     "lint:css": "stylelint \"{src,test}/**/*.{css,less}\"",
     "lint:es": "eslint \"{src,test}/**/*.{js,jsx,ts,tsx}\"",
     "prepare": "husky install && dumi setup",
+    "prepublish": "npm run build",
     "start": "npm run dev"
   },
   "commitlint": {
