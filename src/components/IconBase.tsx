@@ -23,7 +23,7 @@ const IconBase: React.FC<IconBaseProps> = (props) => {
     ...restProps
   } = props;
 
-  const svgRef = React.useRef<HTMLElement>();
+
 
   let target = icon;
 
@@ -43,8 +43,7 @@ const IconBase: React.FC<IconBaseProps> = (props) => {
         height: '1em',
         fill: 'currentColor',
         'aria-hidden': 'true',
-        ...restProps,
-        ref: svgRef,
+        ...restProps
       })}
     </span>
   );

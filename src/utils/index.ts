@@ -11,7 +11,6 @@ import type { AbstractNode } from '../defines/types';
 interface RootProps {
   onClick: MouseEventHandler<Element>;
   style: CSSProperties;
-  ref: MutableRefObject<any>;
   [props: string]:
     | string
     | number
