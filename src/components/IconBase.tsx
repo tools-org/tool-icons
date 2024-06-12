@@ -1,3 +1,4 @@
+'use client';
 import * as React from 'react';
 import type { AbstractNode, IconDefinition } from '../defines/types';
 import { generate } from '../utils';
